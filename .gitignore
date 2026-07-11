@@ -13,4 +13,5 @@ out/
 
 postgres_data/
 *.log
-
+AGENTS.md
+docs
