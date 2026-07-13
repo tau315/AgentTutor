@@ -8,17 +8,16 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "lucide-react": "latest",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "lucide-react": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "typescript": "latest",
-    "tailwindcss": "latest"
+    "tailwindcss": "latest",
+    "typescript": "7.0.2"
   }
 }
-
