@@ -6,4 +6,4 @@ asyncpg
 redis
 python-jose[cryptography]
 passlib[bcrypt]
-
+alembic

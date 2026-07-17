@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     app_name: str = "AgentTutor"
     app_env: str = "development"
-    database_url: str = "postgresql+asyncpg://agenttutor:agenttutor@localhost:5432/agenttutor"
+    database_url: str = "postgresql+asyncpg://agenttutor:agenttutor@localhost:5433/agenttutor"
     redis_url: str = "redis://localhost:6379/0"
     jwt_secret: str = "change-me"
     llm_provider: str = "stub"
@@ -14,4 +14,3 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
-
