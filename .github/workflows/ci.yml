@@ -34,7 +34,7 @@ jobs:
       - run: alembic upgrade head
       - run: alembic check
       - run: ruff check app tests scripts
-      - run: pytest -q
+      - run: python -m pytest -q
 
   frontend:
     runs-on: ubuntu-latest
