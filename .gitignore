@@ -13,6 +13,8 @@ out/
 
 postgres_data/
 *.log
+*.tsbuildinfo
 AGENTS.md
 docs
 .agents
+AGENTS.md
