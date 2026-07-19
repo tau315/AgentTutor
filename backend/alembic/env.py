@@ -20,6 +20,13 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 from app.core.models import Base
 from app.users import models
+from app.admin import models as admin_models
+from app.agent import models as agent_models
+from app.audit import models as audit_models
+from app.messaging import models as messaging_models
+from app.notifications import models as notification_models
+from app.scheduling import models as scheduling_models
+from app.sessions import models as session_models
 
 target_metadata = Base.metadata
 
