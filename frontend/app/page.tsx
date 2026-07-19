@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { getHealth } from "../lib/api";
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   const health = await getHealth().catch(() => ({ status: "offline" }));
 

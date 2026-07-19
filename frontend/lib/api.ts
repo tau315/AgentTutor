@@ -1,4 +1,7 @@
 function apiBaseUrl(): string {
+  if (typeof window === "undefined") {
+    return process.env.API_INTERNAL_BASE_URL ?? process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
+  }
   if (typeof window !== "undefined" && window.location.hostname === "localhost" && window.location.port === "3001") {
     return "http://localhost:8001";
   }
