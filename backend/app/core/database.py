@@ -21,4 +21,8 @@ AsyncSessionLocal = async_sessionmaker(
 # one session per request so that requests are isolated from each other and do not interfere 
 async def get_db_session() -> AsyncGenerator[AsyncSession, None]:
     async with AsyncSessionLocal() as session:
-        yield session
+        try:
+            yield session
+        except Exception:
+            await session.rollback()
+            raise
