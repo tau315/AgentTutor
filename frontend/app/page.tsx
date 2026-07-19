@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getHealth } from "../lib/api";
 
 export default async function HomePage() {
-  const health = await getHealth();
+  const health = await getHealth().catch(() => ({ status: "offline" }));
 
   return (
     <main className="shell">
@@ -15,6 +15,7 @@ export default async function HomePage() {
           <Link href="/dashboard/tutor">Tutor dashboard</Link>
           <Link href="/dashboard/admin">Admin dashboard</Link>
           <Link href="/ai-chat">AI chat</Link>
+          <Link href="/tutors">Find tutors</Link>
         </nav>
       </section>
     </main>
